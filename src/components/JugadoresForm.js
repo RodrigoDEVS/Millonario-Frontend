@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-const JugadoresForm = () => {
+const JugadoresForm = ({handleJugadores}) => {
 
     const objForm = {
         name: ''
@@ -16,12 +16,13 @@ const JugadoresForm = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log("Enviar formulario");
+        handleJugadores(form)
         setForm(objForm)
     }
 
     return (
         <div>
+            {/*Formulario para registro de jugadores*/}
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label htmlFor="name">Para Iniciar Ingrese su Nombre</Form.Label>
