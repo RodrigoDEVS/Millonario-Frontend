@@ -1,5 +1,6 @@
 import { useState } from "react";
 import JugadoresForm from "../components/JugadoresForm";
+import JugadoresTabla from "../components/JugadoresTabla";
 
 const Jugadores = () => {
 
@@ -14,6 +15,8 @@ const Jugadores = () => {
         <>
             <h2>Ingreso de Jugador</h2>
             <JugadoresForm handleJugadores={handleJugadores}/>
+            <h2>Tabla de Puntuaciones</h2>
+            <JugadoresTabla jugadores={jugadores}/>
         </>
     );
 }
