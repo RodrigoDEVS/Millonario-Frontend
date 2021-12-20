@@ -1,11 +1,13 @@
 import './App.css';
+import { JugadoresProvider } from './context/JugadoresContext';
 import Jugadores from './pages/Jugadores';
 
 function App() {
   return (
     <div className="App">
-      <Jugadores/>
-        
+      <JugadoresProvider>
+        <Jugadores/>
+      </JugadoresProvider>      
     </div>
   );
 }
